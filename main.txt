@@ -1,0 +1,15 @@
+async function startProgram() {
+	// This is our sample code for making the RVR drive in a square.
+
+	await roll(0,50,2.0) //Drive for two seconds at a speed of 50 at a heading of 0 degrees.
+	await stopRoll()
+	await roll(90,50,2.0) //Continue for each corner of the square
+	await stopRoll()
+	await roll(180,50,2.0)
+	await stopRoll()
+	await roll(270,50,2.0)
+	await stopRoll()
+	
+	await roll(0,1,0.5) //This realigns the robot at the end of the movement.
+	
+}
